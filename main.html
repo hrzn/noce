@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<head>
+</head>
+
+<script>
+    function getBrowserName() {
+        var userAgent = navigator.userAgent;
+        var browserName = "";
+        if (userAgent.indexOf("Chrome") > -1) {
+            browserName = "Google Chrome";
+        } else if (userAgent.indexOf("Firefox") > -1) {
+            browserName = "Mozilla Firefox";
+        } else if (userAgent.indexOf("Opera") > -1) {
+            browserName = "Opera";
+        } else if (userAgent.indexOf("Trident") > -1) {
+            browserName = "Microsoft Internet Explorer";
+        } else if (userAgent.indexOf("Edge") > -1) {
+            browserName = "Microsoft Edge";
+        } else if (userAgent.indexOf("Safari") > -1) {
+            browserName = "Apple Safari";
+        }
+        return browserName;
+    }
+    function displayInfo() {
+        var browserName = getBrowserName();
+        var currentDate = new Date().toDateString();
+        var infoDiv = document.getElementById("info");
+        infoDiv.innerHTML = "Bienvenue sur notre site web! Vous utilisez " + browserName + ". Nous sommes le " + currentDate + ".";
+    }
+</script>
+
+<body onload="displayInfo()" , style="background-color:aquamarine;">
+    <h1>Le grand jour approche!!</h1>
+    <h1>
+        <font color="green">N'oubliez de nous répondre!!</font>
+    </h1>
+
+    <div id="info" Blah2</div>
+</body>
+
+</html>
+Blah
