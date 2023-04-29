@@ -9,8 +9,166 @@
         body {
             background-image: url("img/bgs/bg9.png");
             background-size: cover;
+            text-align: center;
+            font-size: 16pt;
+
+            /*margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;*/
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotate-inv {
+            from {
+                transform: rotate(360deg);
+            }
+            to {
+                transform: rotate(0deg);
+            }
+        }
+
+        .container {
+            position: relative;
+            height: 800px;
+            width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .circle-image {
+            position: absolute;
+            height: 225px;
+            border-radius: 50%;
+            animation: rotate 3s linear infinite;
+        }
+        .circle-image-inv {
+            position: absolute;
+            height: 225px;
+            border-radius: 50%;
+            animation: rotate-inv 3s linear infinite;
+        }
+        #center-image {
+            position: absolute;
+            height: 300px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+        #circle-image1 {
+            top: 0;
+            left: 40%;
+            transform: translate(-0%, -0%) rotate(0deg);
+        }
+        #circle-image2 {
+            top: 8%;
+            left: 72%;
+            transform: translate(-0%, -0%) rotate(36deg);
+        }
+        #circle-image3 {
+            top: 37%;
+            left: 74%;
+            transform: translate(-0%, -0%) rotate(72deg);
+        }
+        #circle-image4 {
+            top: 67%;
+            left: 72%;
+            transform: translate(-0%, -0%) rotate(108deg);
+        }
+        #circle-image5 {
+            top: 70%;
+            left: 50%;
+            transform: translate(-0%, -0%) rotate(144deg);
+        }
+        #circle-image6 {
+            top: 70%;
+            left: 23%;
+            transform: translate(-0%, -0%) rotate(180deg);
+        }
+        #circle-image7 {
+            top: 50%;
+            left: -10%;
+            transform: translate(-0%, -0%) rotate(216deg);
+        }
+        #circle-image8 {
+            top: 18%;
+            left: 0%;
+            transform: translate(-0%, -0%) rotate(252deg);
+        }
+        #circle-image9 {
+            top: 5%;
+            left: 20%;
+            transform: translate(-0%, -0%) rotate(288deg);
+        }
+        #circle-image10 {
+            top: 13%;
+            left: 67%;
+            transform: translate(-0%, -0%) rotate(324deg);
+        }
+
+
+        /* Define the animation */
+        /*
+        @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+        }
+
+        @keyframes rotate-inv {
+        from {
+            transform: rotate(360deg);
+        }
+        to {
+            transform: rotate(0deg);
+        }
+        }
+
+        .rotate-image {
+            animation: rotate 3s linear infinite;
+        }
+
+        .left-image {
+            position: absolute;
+            left: 100px;
+            top: 400px;
+            animation: rotate 3s linear infinite;
+        }
+        
+        .right-image {
+            position: absolute;
+            right: 100px;
+            top: 400px;
+            animation: rotate 3s linear infinite;
+        }
+
+        .center-image {
+            /* position: absolute; */
+            /* margin: auto; */
+        /*    top: 1;
+            animation: rotate-inv 3s linear infinite;
+        }*/
+
+        .white-space {
+            height: 400px;
         }
     </style>
+
 </head>
 
 
@@ -37,23 +195,55 @@
         var browserName = getBrowserName();
         var currentDate = new Date().toDateString();
         var infoDiv = document.getElementById("info");
-        infoDiv.innerHTML = "Bienvenue sur notre site web! Vous utilisez " + browserName + ". Nous sommes le " + currentDate + ".";
+        infoDiv.innerHTML = "<font size=\"3\">Bienvenue sur notre site web! Vous utilisez " + browserName + ". Nous sommes le " + currentDate + ".</font>";
     }
 </script>
 
 
 <body onload="displayInfo()" , style="background-color:aquamarine;">
-    <h1>Le grand jour approche!!</h1>
+    
+    <font size="60pt" color="red"><i><b><u>Mathilde et Julien se marient!!!</u></b></i></font>
+    <br /><br />
+
+    <font size="20pt">Le grand jour approche!!</font>
+    Et on aimerait beaucoup vous avoir avec nous pour fêter comme il faut!
+
+    <br /><br />
+
     <div style="font-family:Comic Sans MS">
-        <MARQUEE WIDTH=400px BEHAVIOR=SCROLL BGColor=yellow LOOP=100>Bienvenue sur le site de notre mariage! N'hésitez pas à bien regarder les différentes pages, mais surtout, n'oubliez pas de nous envoyer votre réponse!</MARQUEE>
+        <MARQUEE WIDTH=400px BEHAVIOR=SCROLL BGColor=yellow LOOP=100>
+            Bienvenue sur le site de notre mariage! 
+            N'hésitez pas à bien regarder les différentes pages, mais surtout, n'oubliez pas de nous envoyer votre réponse!
+        </MARQUEE>
     </div>
     
     <h1>
-        <font color="green">N'oubliez de nous répondre!!</font>
+        <font color="green">N'oubliez pas de <a href="reponse.html" target="main">nous répondre!!</a></font>
     </h1>
 
-    <div id="info" Blah2</div>
+    <!-- <img class="left-image" src="img/mathilde1.png" height="400px">
+    <img class="right-image" src="img/julien1.png" height="300px">
+    <img class="center-image" src="img/photos/gus1-tr.gif" height="300px">  -->
+
+    <div class="container">
+        <img id="center-image" src="img/photos/maju3.gif" />
+        <img class="circle-image" id="circle-image1" src="img/photos/gus2.gif" />
+        <img class="circle-image-inv" id="circle-image2" src="img/photos/basile2.gif" />
+        <img class="circle-image" id="circle-image3" src="img/photos/family1.gif" />
+        <img class="circle-image-inv" id="circle-image4" src="img/photos/mathilde1.gif" />
+        <img class="circle-image" id="circle-image5" src="img/photos/gus1.gif" />
+        <img class="circle-image-inv" id="circle-image6" src="img/photos/basile1.gif" />
+        <img class="circle-image" id="circle-image7" src="img/photos/maju1.gif" />
+        <img class="circle-image-inv" id="circle-image8" src="img/photos/mathilde3.gif" />
+        <img class="circle-image" id="circle-image9" src="img/photos/juju1.gif" />
+    </div>
+
+    <div id="info"></div>
+    <br />
+    <font size="2">Website best viewed with</font> <img src="img/collection/ns_logo.gif">
+    <img src="img/collection/notepad.gif">
+
+        
 </body>
 
 </html>
-Blah
