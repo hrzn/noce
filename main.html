@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            background-image: url("img/bgs/bg14.png");
+            background-size: cover;
+            text-align: center;
+            font-size: 16pt;
+        }
+    </style>
+
+</head>
+
+
+<script>
+    function getBrowserName() {
+        var userAgent = navigator.userAgent;
+        var browserName = "";
+        if (userAgent.indexOf("Chrome") > -1) {
+            browserName = "Google Chrome";
+        } else if (userAgent.indexOf("Firefox") > -1) {
+            browserName = "Mozilla Firefox";
+        } else if (userAgent.indexOf("Opera") > -1) {
+            browserName = "Opera";
+        } else if (userAgent.indexOf("Trident") > -1) {
+            browserName = "Microsoft Internet Explorer";
+        } else if (userAgent.indexOf("Edge") > -1) {
+            browserName = "Microsoft Edge";
+        } else if (userAgent.indexOf("Safari") > -1) {
+            browserName = "Apple Safari";
+        }
+        return browserName;
+    }
+    function displayInfo() {
+        var browserName = getBrowserName();
+        var currentDate = new Date().toDateString();
+        var infoDiv = document.getElementById("info");
+        infoDiv.innerHTML = "<font size=\"3\">Bienvenue sur notre site web! Vous utilisez " + browserName + ". Nous sommes le " + currentDate + ".</font>";
+    }
+</script>
+
+
+<body onload="displayInfo()" , style="background-color:aquamarine;">
+    
+    <font size="60pt" color="red"><i><b><u>Attention!!! Anniversaires!!!</u></b></i></font>
+    <br /><br />
+
+    <font size="20pt" color="white"><i><b><u>SAVE THE DATE - SAUVE LA DATE
+        40 ans de Tim, Mathieu, Christophe et Simon
+        La Praz
+        Du vendredi 20 juin 2025 au soir jusqu’au dimanche 22 à midi
+        Karaoke/bar/ateliers de développement personnel/DJ/blagues
+        Du vendredi</u></b></i></font>
+    
+
+    <div style="font-family:Comic Sans MS">
+        <MARQUEE WIDTH=150px BEHAVIOR=SCROLL BGColor=#AAFF00>
+            <font size="10">Noce de tous les diables Party of all the devils 所有惡魔的婚禮 Свадьба всех дьяволов すべての悪魔の結婚式 모든 악마의 결혼식</font>
+        </MARQUEE>
+        <marquee direction="up" style="text-align:center"><font size="10", color="red">Noce</font></marquee></center>
+    </div>
+    
+    <img src="img/collection/059.gif"><img src="img/collection/060.gif"><img src="img/collection/061.gif">
+    <br />
+    <br />
+    <img src="img/collection/065.gif">
+
+
+    <div id="info"></div>
+    <br />
+    <img src="img/collection/counter.gif">
+    <font size="2", color="white">Website best viewed with</font> <img src="img/collection/ns_logo.gif">
+
+    <p><font size="3", color="white">Vous recherchez le site de l'ancienne noce?? Il se trouve:<a href="https://lanoce.ch/noce">ici</a></font></p>
+    
+        
+</body>
+
+</html>
